@@ -9,7 +9,9 @@ int main(int argc, char *argv[]) {
   f.open("day1.txt",std::ios::in);
 
   std::string line;
+  int phase = 0;
   while(std::getline(f,line)) {
-    std::cout << line << std::endl;
+    phase += std::stoi(line);
   }
+  std::cout << "Phase is " << phase << std::endl;
 }
