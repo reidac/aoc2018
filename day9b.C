@@ -41,7 +41,7 @@ public:
       count += 1;
       // Find the marble eight positions ccw from the current one.
       // The seven-cc one will be removed, but we need its predecessor,
-      // which is the eighth one.  Linear search.  TODO: better.
+      // which is the eighth one.  Now with doubly-linked lists.
       Marble *egtcc = current->prev->prev->prev->prev->prev->prev->prev->prev;
       Marble *sevencc = egtcc->next;
       Marble *sixcc = sevencc->next;
