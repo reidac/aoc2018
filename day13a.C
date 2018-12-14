@@ -248,7 +248,6 @@ int main(int argc, char *argv[]) {
 	std::cout << "Row, col are " << newrow << "," << newcol << std::endl;
       }
     } // End of loop over carts.
-    std::cout << "Tick!" << std::endl;
   } // End of while-not-done loop.
   std::cout << "Collision at x,y = " << collision_c << "," << collision_r << std::endl;
   
