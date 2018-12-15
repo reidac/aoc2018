@@ -15,6 +15,8 @@ int main() {
   int el0 = 0;
   int el1 = 1;
 
+  int rsize = 2;
+  
   std::string istring = INPUT;
   int isize = istring.size(); // # of digits in the input, as a string.
   
@@ -32,12 +34,13 @@ int main() {
     std::string scorestr = ss.str();
     for(auto &sdx : scorestr) {
       recipes.push_back(sdx);
+      rsize += 1;
     }
 
-    el0 = (el0+1+(recipes[el0]-'0'))%(recipes.size());
-    el1 = (el1+1+(recipes[el1]-'0'))%(recipes.size());
+    el0 = (el0+1+(recipes[el0]-'0'))%(rsize);
+    el1 = (el1+1+(recipes[el1]-'0'))%(rsize);
 
-    while ((sofar+isize)<recipes.size()) {
+    while ((sofar+isize)<rsize) {
       done = true;
       for(int idx=0;idx<isize;++idx) {
 	if (istring[idx]!=recipes[sofar+idx]) {
